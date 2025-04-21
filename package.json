@@ -2,6 +2,16 @@
   "name": "addisu-portfolio",
   "version": "0.0.1",
   "private": true,
+  "description": "My personal portfolio website",
+  "author": "Addisu Taye",
+  "license": "MIT",
+  "keywords": [
+    "portfolio",
+    "website",
+    "react",
+    "vite"
+  ],
+  "homepage": "https://addisu-taye.github.io/addisu-taye-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -20,6 +30,5 @@
     "postcss": "^8.0.0",
     "tailwindcss": "^3.0.0",
     "vite": "^4.0.0"
-  },
-  "homepage": "https://addisutaye.github.io/addisu-portfolio"
+  }
 }
