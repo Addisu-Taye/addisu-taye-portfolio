@@ -1,12 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animated Background Gradient */
 body {
-    @apply bg-gradient-to-br from-purple-200 via-blue-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black;
-    background-size: 400% 400%;
-    animation: gradientMove 20s ease infinite;
+  @apply bg-gradient-to-br from-purple-200 via-blue-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black;
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
+  transition: background 0.5s ease;
+}
+
+/* Typing animation class */
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%;
   }
-  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

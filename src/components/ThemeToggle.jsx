@@ -1,28 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { FiMoon, FiSun } from "react-icons/fi";
+import React from 'react';
 
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(() =>
-    localStorage.getItem("theme") === "dark"
-  );
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (isDark) {
-      root.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      root.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDark]);
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+  };
 
   return (
-    <button
-      onClick={() => setIsDark(!isDark)}
-      className="fixed top-4 right-4 p-2 text-xl rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-white shadow hover:scale-110 transition-transform"
-    >
-      {isDark ? <FiSun /> : <FiMoon />}
+    <button onClick={toggleTheme} className="fixed bottom-4 left-4 p-2 rounded-full shadow-lg bg-white dark:bg-gray-700">
+      🌓
     </button>
   );
 };
