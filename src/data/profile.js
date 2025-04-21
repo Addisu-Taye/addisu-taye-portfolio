@@ -19,8 +19,8 @@ export const profile = {
     },
   ],
   contact: {
-    email: "addisutaye@gmail.com",
-    github: "https://github.com/AddisuTaye",
+    email: "addtaye@gmail.com",
+    github: "https://github.com/Addisu-Taye",
     linkedin: "https://linkedin.com/in/addisutaye",
   },
 };

@@ -1,0 +1,12 @@
+body {
+    @apply bg-gradient-to-br from-purple-200 via-blue-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black;
+    background-size: 400% 400%;
+    animation: gradientMove 20s ease infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
