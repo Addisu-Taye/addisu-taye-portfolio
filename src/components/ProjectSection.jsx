@@ -1,55 +1,27 @@
-import React from "react";
+// src/components/ProjectSection.jsx
+import React from 'react';
+import ProjectCard from './ProjectCard';
 
-const projects = [
-  {
-    title: "AI Job Assistant",
-    description: "Scrapes jobs, generates resumes & cover letters, and applies automatically.",
-    tech: ["React", "Django", "Ollama", "Playwright"],
-    link: "#",
-  },
-  {
-    title: "Offline Attendance App",
-    description: "Flutter-based GPS attendance tracker with sync logic and admin dashboard.",
-    tech: ["Flutter", "MySQL", "WorkManager"],
-    link: "#",
-  },
-];
+// ProjectSection component displays a grid of projects
+function ProjectSection({ projects }) {
+  if (!projects || projects.length === 0) {
+    return <div className="text-center py-10 text-gray-500 dark:text-gray-400">No projects to display.</div>;
+  }
 
-const ProjectSection = () => (
-  <section id="projects" className="py-16 px-4 bg-gray-100 dark:bg-gray-800">
-    <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
-      Projects
-    </h2>
-    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      {projects.map((p, idx) => (
-        <div
-          key={idx}
-          className="bg-white dark:bg-gray-900 rounded-lg shadow p-6 hover:shadow-xl transition"
-        >
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{p.title}</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">{p.description}</p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {p.tech.map((t, i) => (
-              <span
-                key={i}
-                className="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-          <a
-            href={p.link}
-            className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline text-sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Project →
-          </a>
+  return (
+    <section id="projects" className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-12">
+          My <span className="text-purple-600">Projects</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
-      ))}
-    </div>
-  </section>
-);
+      </div>
+    </section>
+  );
+}
 
 export default ProjectSection;

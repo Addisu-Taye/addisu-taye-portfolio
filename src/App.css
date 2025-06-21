@@ -1,47 +1,59 @@
+/* src/App.css */
+/* Import Tailwind CSS directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Animated Background Gradient */
+/* Animated Background Gradient for the body */
 body {
+  /* Apply Tailwind classes for responsive background color changes */
   @apply bg-gradient-to-br from-purple-200 via-blue-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black;
+  /* Set initial background size for the gradient animation */
   background-size: 400% 400%;
+  /* Apply the gradient movement animation */
   animation: gradientMove 20s ease infinite;
+  /* Smooth transition for background changes */
   transition: background 0.5s ease;
+  /* Set font family */
+  font-family: 'Inter', sans-serif; /* Using Inter as specified */
 }
 
-/* Typing animation class */
+/* Keyframes for the gradient background animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  50% {
+    background-position: 100% 50%; /* Middle position */
+  }
+  100% {
+    background-position: 0% 50%; /* End position, loops back */
+  }
+}
+
+/* Typing animation class for text effects */
 .animate-typing {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  border-right: 2px solid;
+  overflow: hidden; /* Hides text that overflows */
+  white-space: nowrap; /* Prevents text from wrapping */
+  width: 0; /* Starts with zero width */
+  border-right: 2px solid; /* Creates the blinking cursor effect */
+  /* Combine typing and blink animations */
   animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
+/* Keyframes for the typing text animation */
 @keyframes typing {
   0% {
-    width: 0;
+    width: 0; /* Start with no width */
   }
   100% {
-    width: 100%;
+    width: 100%; /* Expand to full width */
   }
 }
 
+/* Keyframes for the blinking cursor animation */
 @keyframes blink {
   50% {
-    border-color: transparent;
+    border-color: transparent; /* Makes the border (cursor) disappear at 50% */
   }
 }
