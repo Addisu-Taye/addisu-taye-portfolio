@@ -1,0 +1,101 @@
+{
+  "profile": {
+    "name": "Addisu Taye",
+    "title": "Full-Stack Developer | AI Enthusiast",
+    "bio": "Passionate about building innovative web applications and exploring the frontiers of artificial intelligence. With a strong background in both front-end and back-end development, I enjoy creating robust, scalable, and user-friendly solutions. I'm always eager to learn new technologies and contribute to impactful projects.",
+    "email": "addtaye@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/addisutaye/",
+    "github": "https://github.com/addisu-taye",
+    "resumePdf": "/resume/Addisu_Taye_Resume.pdf",
+    "profileImage": "https://github.com/Addisu-Taye.png"
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "E-commerce Platform",
+      "description": "Developed a full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment gateway integration.",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+      "githubLink": "https://github.com/addisu-taye/ecommerce-platform",
+      "liveLink": "https://ecommerce.addisu-taye.com",
+      "image": "https://placehold.co/600x400/3366FF/FFFFFF?text=E-commerce"
+    },
+    {
+      "id": "2",
+      "title": "AI-Powered Bank Customer Service Chatbot",
+      "description": "A vector-based chatbot system for bank customer service, built using LangChain and HuggingFace embeddings. This project dynamically loads its knowledge base from a GitHub Release, processes financial documents into vector embeddings, and uses a FAISS vector database for efficient semantic search and chatbot interaction.",
+      "technologies": ["Python", "Flask", "NLTK", "TensorFlow"],
+      "githubLink": "https://github.com/Addisu-Taye/bank-customer-service-chatbot",
+      "liveLink": "https://chatbot.addisu-taye.com",
+      "image": "https://placehold.co/600x400/FFC300/000000?text=AI+Chatbot"
+    },
+    {
+      "id": "3",
+      "title": "Portfolio Website (This One!)",
+      "description": "A responsive personal portfolio website showcasing projects, blog posts, and contact information, built with modern web technologies.",
+      "technologies": ["React", "Vite", "Tailwind CSS", "React Router"],
+      "githubLink": "https://github.com/addisu-taye/addisu-taye-portfolio",
+      "liveLink": "https://addisu-taye.github.io/addisu-taye-portfolio",
+      "image": "https://placehold.co/600x400/DAF7A6/000000?text=Portfolio"
+    },{
+      "id": "4",
+      "title": "fastapi-mongodb-backend",
+      "description": "This is a simple backend API built with FastAPI and MongoDB, featuring JWT-based user registration and login. It provides secure CRUD operations on items, designed for integration with React Native or any frontend.",
+      "technologies": ["React", "Vite", "Tailwind CSS", "React Router"],
+      "githubLink": "https://github.com/Addisu-Taye/fastapi-mongodb-portfolio",
+      "liveLink": "None",
+      "image": "https://placehold.co/600x400/DAF7A6/000000?text=fastapi-mongodb-backend"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "1",
+      "title": "Getting Started with React Hooks",
+      "date": "2024-03-15",
+      "summary": "A beginner-friendly guide to understanding and using React Hooks for managing state and side effects in functional components."
+    },
+    {
+      "id": "2",
+      "title": "Demystifying Asynchronous JavaScript",
+      "date": "2024-02-28",
+      "summary": "An in-depth look at callbacks, Promises, and async/await for handling asynchronous operations in JavaScript."
+    },
+    {
+      "id": "3",
+      "title": "Deploying React Apps to GitHub Pages with Vite",
+      "date": "2024-01-20",
+      "summary": "Step-by-step instructions for deploying your Vite-powered React applications to GitHub Pages, including base path configurations."
+    }
+  ],
+  "i18n": {
+    "en": {
+      "translation": {
+        "welcome": "Welcome to my Portfolio!",
+        "home": "Home",
+        "projects": "Projects",
+        "blog": "Blog",
+        "contact": "Contact",
+        "download_resume": "Download Resume",
+        "view_on_github": "View on GitHub",
+        "view_live": "View Live",
+        "recent_blog_posts": "Recent Blog Posts",
+        "read_more": "Read More",
+        "all_rights_reserved": "All rights reserved."
+      }
+    },
+    "am": {
+      "translation": {
+        "welcome": "ወደ ፖርትፎሊዮዬ እንኳን ደህና መጡ!",
+        "home": "ዋና ገጽ",
+        "projects": "ፕሮጀክቶች",
+        "blog": "ብሎግ",
+        "contact": "አግኙኝ",
+        "download_resume": "ሪዙሜ አውርድ",
+        "view_on_github": "በጊትሀብ ይመልከቱ",
+        "view_live": "ቀጥታ ይመልከቱ",
+        "recent_blog_posts": "የቅርብ ጊዜ የብሎግ ልጥፎች",
+        "read_more": "ተጨማሪ ያንብቡ",
+        "all_rights_reserved": "መብቱ በህግ የተጠበቀ ነው፡፡"
+      }
+    }
+  }
+}
