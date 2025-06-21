@@ -7,9 +7,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 // Corrected import paths for pages and components
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage'; // <--- Ensure this path is correct
 import BlogPage from './pages/BlogPage';
-import BlogSection from './components/BlogSection'; // <--- Ensure this import is present
+import BlogSection from './components/BlogSection';
 
 function App() {
   const [portfolioData, setPortfolioData] = useState(null);
@@ -85,7 +85,7 @@ function App() {
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-12">
                   My <span className="text-purple-600">Blog</span>
                 </h1>
-                <BlogSection blogPosts={portfolioData.blogPosts} /> {/* BlogSection is used here */}
+                <BlogSection blogPosts={portfolioData.blogPosts} />
               </div>
             }
           />
