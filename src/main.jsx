@@ -49,12 +49,17 @@ function MainAppWrapper() {
     );
   }
 
+  // Get the base URL from Vite's environment variables
+  // import.meta.env.BASE_URL will be '/' in development, and '/addisu-taye-portfolio/' in production (from vite.config.js)
+  const basename = import.meta.env.BASE_URL;
+
   return (
     <React.StrictMode>
       {/* I18nextProvider makes the i18n instance available to all components */}
       <I18nextProvider i18n={i18n}>
         {/* Router component provides routing context to the entire application */}
-        <Router>
+        {/* Pass the basename to BrowserRouter to correctly handle routing in subdirectories like GitHub Pages */}
+        <Router basename={basename}>
           <App />
         </Router>
       </I18nextProvider>

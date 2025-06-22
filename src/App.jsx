@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 // Corrected import paths for pages and components
-import HomePage from './pages/HomePage'; // <--- Ensure this path is correct
+import HomePage from './pages/HomePage';
 import BlogPage from './pages/BlogPage';
 import BlogSection from './components/BlogSection';
 

@@ -3,11 +3,11 @@
     "name": "Addisu Taye",
     "title": "Full-Stack Developer | AI Enthusiast",
     "bio": "Passionate about building innovative web applications and exploring the frontiers of artificial intelligence. With a strong background in both front-end and back-end development, I enjoy creating robust, scalable, and user-friendly solutions. I'm always eager to learn new technologies and contribute to impactful projects.",
-    "email": "addtaye@gmail.com",
+    "email": "addisu.taye@example.com",
     "linkedin": "https://www.linkedin.com/in/addisutaye/",
     "github": "https://github.com/addisu-taye",
     "resumePdf": "/resume/Addisu_Taye_Resume.pdf",
-    "profileImage": "https://github.com/Addisu-Taye.png"
+    "profileImage": "https://placehold.co/400x400/FF5733/FFFFFF?text=Addisu+Taye"
   },
   "projects": [
     {
@@ -15,16 +15,18 @@
       "title": "E-commerce Platform",
       "description": "Developed a full-stack e-commerce solution with user authentication, product catalog, shopping cart, and payment gateway integration.",
       "technologies": ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+      "categories": ["Full Stack", "Web", "Frontend", "Backend"],
       "githubLink": "https://github.com/addisu-taye/ecommerce-platform",
       "liveLink": "https://ecommerce.addisu-taye.com",
       "image": "https://placehold.co/600x400/3366FF/FFFFFF?text=E-commerce"
     },
     {
       "id": "2",
-      "title": "AI-Powered Bank Customer Service Chatbot",
-      "description": "A vector-based chatbot system for bank customer service, built using LangChain and HuggingFace embeddings. This project dynamically loads its knowledge base from a GitHub Release, processes financial documents into vector embeddings, and uses a FAISS vector database for efficient semantic search and chatbot interaction.",
+      "title": "AI-Powered Chatbot",
+      "description": "Built an intelligent chatbot using natural language processing (NLP) to provide customer support and answer FAQs.",
       "technologies": ["Python", "Flask", "NLTK", "TensorFlow"],
-      "githubLink": "https://github.com/Addisu-Taye/bank-customer-service-chatbot",
+      "categories": ["Machine Learning", "AI/ML", "Backend"],
+      "githubLink": "https://github.com/addisu-taye/ai-chatbot",
       "liveLink": "https://chatbot.addisu-taye.com",
       "image": "https://placehold.co/600x400/FFC300/000000?text=AI+Chatbot"
     },
@@ -33,17 +35,40 @@
       "title": "Portfolio Website (This One!)",
       "description": "A responsive personal portfolio website showcasing projects, blog posts, and contact information, built with modern web technologies.",
       "technologies": ["React", "Vite", "Tailwind CSS", "React Router"],
+      "categories": ["Frontend", "Web", "UI/UX"],
       "githubLink": "https://github.com/addisu-taye/addisu-taye-portfolio",
       "liveLink": "https://addisu-taye.github.io/addisu-taye-portfolio",
       "image": "https://placehold.co/600x400/DAF7A6/000000?text=Portfolio"
-    },{
+    },
+    {
       "id": "4",
-      "title": "fastapi-mongodb-backend",
-      "description": "This is a simple backend API built with FastAPI and MongoDB, featuring JWT-based user registration and login. It provides secure CRUD operations on items, designed for integration with React Native or any frontend.",
-      "technologies": ["React", "Vite", "Tailwind CSS", "React Router"],
-      "githubLink": "https://github.com/Addisu-Taye/fastapi-mongodb-portfolio",
-      "liveLink": "None",
-      "image": "https://placehold.co/600x400/DAF7A6/000000?text=fastapi-mongodb-backend"
+      "title": "Mobile Expense Tracker",
+      "description": "A cross-platform mobile application to track daily expenses and visualize spending habits.",
+      "technologies": ["Flutter", "Dart", "Firebase"],
+      "categories": ["Mobile App", "Frontend", "Full Stack"],
+      "githubLink": "https://github.com/addisu-taye/mobile-expense-tracker",
+      "liveLink": null,
+      "image": "https://placehold.co/600x400/FF7F50/FFFFFF?text=Mobile+App"
+    },
+    {
+      "id": "5",
+      "title": "Multi-Agent Simulation",
+      "description": "Developed a simulation environment for autonomous agents interacting in a dynamic setting.",
+      "technologies": ["Python", "Mesa", "Pygame"],
+      "categories": ["Multi Agent", "AI/ML", "Simulation"],
+      "githubLink": "https://github.com/addisu-taye/multi-agent-sim",
+      "liveLink": null,
+      "image": "https://placehold.co/600x400/6A5ACD/FFFFFF?text=Multi-Agent"
+    },
+    {
+      "id": "6",
+      "title": "RESTful API with Node.js",
+      "description": "A robust backend API serving data for various frontend applications, with authentication and data validation.",
+      "technologies": ["Node.js", "Express", "PostgreSQL", "JWT"],
+      "categories": ["Backend", "Web"],
+      "githubLink": "https://github.com/addisu-taye/nodejs-rest-api",
+      "liveLink": null,
+      "image": "https://placehold.co/600x400/4682B4/FFFFFF?text=Backend+API"
     }
   ],
   "blogPosts": [
@@ -79,7 +104,18 @@
         "view_live": "View Live",
         "recent_blog_posts": "Recent Blog Posts",
         "read_more": "Read More",
-        "all_rights_reserved": "All rights reserved."
+        "all_rights_reserved": "All rights reserved.",
+        "all_projects": "All Projects",
+        "full_stack": "Full Stack",
+        "machine_learning": "Machine Learning",
+        "web": "Web",
+        "backend": "Backend",
+        "frontend": "Frontend",
+        "mobile_app": "Mobile App",
+        "multi_agent": "Multi Agent",
+        "ai_ml": "AI/ML",
+        "simulation": "Simulation",
+        "ui_ux": "UI/UX"
       }
     },
     "am": {
@@ -94,7 +130,18 @@
         "view_live": "ቀጥታ ይመልከቱ",
         "recent_blog_posts": "የቅርብ ጊዜ የብሎግ ልጥፎች",
         "read_more": "ተጨማሪ ያንብቡ",
-        "all_rights_reserved": "መብቱ በህግ የተጠበቀ ነው፡፡"
+        "all_rights_reserved": "መብቱ በህግ የተጠበቀ ነው፡፡",
+        "all_projects": "ሁሉም ፕሮጀክቶች",
+        "full_stack": "ሙሉ ስታክ",
+        "machine_learning": "ማሽን መማር",
+        "web": "ድር",
+        "backend": "ባክኤንድ",
+        "frontend": "ፍሮንትኤንድ",
+        "mobile_app": "ሞባይል መተግበሪያ",
+        "multi_agent": "ብዙ ወኪል",
+        "ai_ml": "AI/ML",
+        "simulation": "ሲሙሌሽን",
+        "ui_ux": "UI/UX"
       }
     }
   }

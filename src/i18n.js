@@ -48,4 +48,4 @@ const loadTranslations = async () => {
 
 // Export the i18n instance directly and the async loading function
 export { loadTranslations };
-export default i18n;
+export default i18n; // Export the i18n instance for I18nextProvider

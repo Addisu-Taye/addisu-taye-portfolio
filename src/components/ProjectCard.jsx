@@ -15,7 +15,7 @@ function ProjectCard({ project }) {
         alt={project.title}
         className="w-full h-48 object-cover"
         // Corrected onError fallback URL
-        onError={(e) => { e.target.onerror = null; e.target.src = '[https://placehold.co/600x400/808080/FFFFFF?text=Project](https://placehold.co/600x400/808080/FFFFFF?text=Project)'; }}
+        onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/808080/FFFFFF?text=Project'; }}
       />
       <div className="p-6">
         {/* Project Title */}

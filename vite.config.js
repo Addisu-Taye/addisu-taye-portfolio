@@ -5,19 +5,17 @@ import react from '@vitejs/plugin-react';
 // Defines the Vite configuration
 export default defineConfig(({ command }) => {
   const isProduction = command === 'build'; // Check if the command is 'build'
+  // Determine the base path based on whether it's a production build or local development
+  // For GitHub Pages, this should be the repository name. For local, it's just '/'.
   const base_path = isProduction ? '/addisu-taye-portfolio/' : '/';
 
   return {
+    // Set the base URL for the application.
+    // In production, this matches the GitHub repository name for GitHub Pages deployment.
+    // In development, it defaults to the root path '/'.
     base: base_path,
+    // Use the React plugin for Vite, which enables React Fast Refresh and JSX transformation.
     plugins: [react()],
-    build: {
-      rollupOptions: {
-        // This external configuration tells Rollup to treat any path
-        // that starts with our 'base_path' as an external resource.
-        // This is a common workaround for issues where Rollup incorrectly
-        // tries to bundle assets referenced by absolute paths in index.html.
-        external: (id) => id.startsWith(base_path),
-      },
-    },
+    // No specific Rollup options needed here for basic React/Vite/Router setup.
   };
 });
