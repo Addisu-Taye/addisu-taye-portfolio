@@ -59,7 +59,7 @@ function MainAppWrapper() {
       <I18nextProvider i18n={i18n}>
         {/* Router component provides routing context to the entire application */}
         {/* Pass the basename to BrowserRouter to correctly handle routing in subdirectories like GitHub Pages */}
-        <Router basename={basename}>
+        <Router >
           <App />
         </Router>
       </I18nextProvider>
