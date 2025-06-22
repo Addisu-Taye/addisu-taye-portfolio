@@ -1,12 +1,8 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
-// Import Layout Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
-// Corrected import paths for pages and components
 import HomePage from './pages/HomePage';
 import BlogPage from './pages/BlogPage';
 import BlogSection from './components/BlogSection';
@@ -14,35 +10,24 @@ import BlogSection from './components/BlogSection';
 function App() {
   const [portfolioData, setPortfolioData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("App.jsx: useEffect initiated.");
     const fetchPortfolioData = async () => {
-      console.log("App.jsx: fetchPortfolioData starting...");
       try {
         const response = await fetch('/data.json');
-        console.log("App.jsx: Response received. Status OK:", response.ok);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error('Failed to load data.json');
         const data = await response.json();
-        console.log("App.jsx: Data fetched successfully:", data);
         setPortfolioData(data);
       } catch (e) {
-        console.error("App.jsx: Error fetching portfolio data:", e);
-        setError(e.message);
+        console.error("Error fetching portfolio data:", e);
       } finally {
-        console.log("App.jsx: fetchPortfolioData finished. Setting loading to false.");
         setLoading(false);
       }
     };
-
     fetchPortfolioData();
   }, []);
 
   if (loading) {
-    console.log("App.jsx: Rendering Loading state.");
     return (
       <div className="flex items-center justify-center min-h-screen text-2xl text-gray-700 dark:text-gray-300">
         Loading portfolio...
@@ -50,25 +35,17 @@ function App() {
     );
   }
 
-  if (error) {
-    console.log("App.jsx: Rendering Error state. Error:", error);
+  if (!portfolioData) {
     return (
-      <div className="flex items-center justify-center min-h-screen text-red-600 text-2xl">
-        Error loading portfolio: {error}
+      <div className="flex items-center justify-center min-h-screen text-red-600 text-xl">
+        Failed to load portfolio data.
       </div>
     );
   }
 
-  if (!portfolioData) {
-    console.log("App.jsx: portfolioData is null after loading, rendering null.");
-    return null; // This case should theoretically not be hit if loading is false and no error
-  }
-
-  console.log("App.jsx: Rendering main application with portfolioData:", portfolioData);
   return (
     <div className="font-sans min-h-screen flex flex-col pt-20">
       <Navbar />
-
       <main className="flex-grow container mx-auto px-4 py-8">
         <Routes>
           <Route
@@ -100,7 +77,6 @@ function App() {
           />
         </Routes>
       </main>
-
       <Footer />
     </div>
   );

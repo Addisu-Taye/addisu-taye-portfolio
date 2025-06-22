@@ -1,51 +1,70 @@
 // src/i18n.js
-// Configuration for i18next, a popular internationalization framework for JavaScript.
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-// 1. Initialize i18n instance immediately.
-// It will have default/empty resources until data.json is loaded.
-i18n
-  .use(initReactI18next) // Passes i18n instance to react-i18next
-  .init({
-    resources: {}, // Start with empty resources
-    lng: 'en', // Default language
-    fallbackLng: 'en', // Fallback language if the selected one is not available
-    interpolation: {
-      escapeValue: false // React already escapes values, so no need for i18next to do it
+// Default fallback translations
+const defaultResources = {
+  en: {
+    translation: {
+      welcome: "Welcome to my Portfolio!",
+      home: "Home",
+      projects: "Projects",
+      blog: "Blog",
+      contact: "Contact",
+      download_resume: "Download Resume",
+      view_on_github: "View on GitHub",
+      view_live: "View Live",
+      recent_blog_posts: "Recent Blog Posts",
+      read_more: "Read More",
+      all_rights_reserved: "All rights reserved.",
+      all_projects: "All Projects",
+      full_stack: "Full Stack",
+      machine_learning: "Machine Learning",
+      web: "Web",
+      backend: "Backend",
+      frontend: "Frontend",
+      mobile_app: "Mobile App",
+      multi_agent: "Multi Agent",
+      ai_ml: "AI/ML",
+      simulation: "Simulation",
+      ui_ux: "UI/UX"
     }
-  })
-  .catch(error => {
-    console.error("Initial i18n setup failed:", error);
-  });
-
-// 2. Function to load translations from data.json asynchronously.
-// This will be called from main.jsx and waited upon.
-const loadTranslations = async () => {
-  try {
-    const response = await fetch('/data.json'); // Adjust path if data.json is elsewhere
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+  },
+  am: {
+    translation: {
+      welcome: "ወደ ፖርትፎሊዮዬ እንኳን ደህና መጡ!",
+      home: "ዋና ገጽ",
+      projects: "ፕሮጀክቶች",
+      blog: "ብሎግ",
+      contact: "አግኙኝ",
+      download_resume: "ሪዙሜ አውርድ",
+      view_on_github: "በጊትሀብ ይመልከቱ",
+      view_live: "ቀጥታ ይመልከቱ",
+      recent_blog_posts: "የቅርብ ጊዜ የብሎግ ልጥፎች",
+      read_more: "ተጨማሪ ያንብቡ",
+      all_rights_reserved: "መብቱ በህግ የተጠበቀ ነው፡፡",
+      all_projects: "ሁሉም ፕሮጀክቶች",
+      full_stack: "ሙሉ ስታክ",
+      machine_learning: "ማሽን መማር",
+      web: "ድር",
+      backend: "ባክኤንድ",
+      frontend: "ፍሮንትኤንድ",
+      mobile_app: "ሞባይል መተግበሪያ",
+      multi_agent: "ብዙ ወኪል",
+      ai_ml: "AI/ML",
+      simulation: "ሲሙሌሽን",
+      ui_ux: "UI/UX"
     }
-    const data = await response.json();
-
-    // Add fetched resources to the already initialized i18n instance
-    if (data.i18n) {
-      Object.keys(data.i18n).forEach(lang => {
-        i18n.addResourceBundle(lang, 'translation', data.i18n[lang].translation, true, true);
-      });
-      // Optionally change language to a default if the current one isn't in fetched bundles
-      if (!i18n.hasResourceBundle(i18n.language, 'translation')) {
-        i18n.changeLanguage('en');
-      }
-    }
-  } catch (error) {
-    console.error("Failed to fetch translation resources:", error);
-    // Even if fetch fails, i18n instance is still initialized with fallback,
-    // so the app can render without crashing due to i18n issues.
   }
 };
 
-// Export the i18n instance directly and the async loading function
-export { loadTranslations };
-export default i18n; // Export the i18n instance for I18nextProvider
+i18n.use(initReactI18next).init({
+  resources: defaultResources,
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false // React already escapes values
+  }
+});
+
+export default i18n;
